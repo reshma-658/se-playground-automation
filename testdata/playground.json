@@ -1,0 +1,7 @@
+{
+  "url": "https://playground.tensorflow.org/",
+  "noise": "5",
+  "learningRate": "0.1",
+  "epochThreshold": 0.3,
+ "totalcanvasRemoved": 2
+}
