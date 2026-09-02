@@ -52,6 +52,40 @@ The automated test performs the following steps:
 
 ---
 
+## 🛠️ Environment Setup
+
+### 1️⃣ Install Required Software
+
+- **Node.js** (Version 24 recommended)  
+- **Visual Studio Code**
+
+Install these VS Code extensions:
+
+- Playwright Test Runner  
+- TypeScript
+
+---
+
+### 2️⃣ Open the Project
+
+#### Step 1 — Download the project 
+You will receive the project as a `.zip` file.
+
+#### Step 2 — Extract the ZIP  
+Right‑click → **Extract All**  
+Choose a location (Documents or Desktop).
+
+#### Step 3 — Open the folder in Visual Studio Code  
+- Open **VS Code**  
+- Go to **File → Open Folder**  
+- Select the extracted project folder
+
+---
+
+### 3️⃣ Open Terminal in VS Code
+
+- VS Code → **Terminal → New Terminal**  
+- Ensure the terminal path shows your project folder, for example:
 ## 👩‍💻 Author
 
 **Reshma Elizabeth** 
