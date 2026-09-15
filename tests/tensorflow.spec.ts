@@ -22,7 +22,6 @@ test.describe('TensorFlow Playground Automation Suite', () => {
     });
 
     await allure.step('Capture the initial Test Loss value', async () => {
-      await expect(playground.testLoss).toBeVisible();
       const initialLoss = await playground.getTestLoss();
       await allure.attachment('Initial Loss', initialLoss.toString(), 'text/plain');
       expect.soft(Number(initialLoss)).not.toBeNaN();
@@ -74,10 +73,11 @@ test.describe('TensorFlow Playground Automation Suite', () => {
     await allure.step('Capture the final Test Loss value after training', async () => {
       const finalLoss = await playground.getTestLoss();
       console.log(`Final loss when Epoch value is ${testData.epochThreshold} : `, finalLoss);
-      expect.soft(Number(finalLoss)).not.toBeNaN();
+      expect(Number(finalLoss)).not.toBeNaN();
       await allure.attachment('Final Loss', finalLoss.toString(), 'text/plain');
     });
 
+    expect(test.info().errors).toHaveLength(0);
   });
 
 });

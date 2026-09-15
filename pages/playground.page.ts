@@ -36,8 +36,7 @@ export default class PlaygroundPage extends BasePage{
 
   async goto(url: string) {
     Logger.action('Navigating to TensorFlow Playground...');
-    await this.page.goto(url);
-    await this.waitForPageLoad();
+    await super.goto(url);
     const cookies = await this.page.context().cookies();
     expect(cookies.length).toBeGreaterThan(0);
     Logger.success('Navigation successful.');
@@ -46,7 +45,7 @@ export default class PlaygroundPage extends BasePage{
   async getTestLoss() {
     Logger.action('Fetching test loss value...');
     await expect(this.testLoss).toBeVisible();
-    return await this.testLoss.innerText();
+    return await this.getText(this.testLoss);
   }
 
   async selectDatasetExclusive() {

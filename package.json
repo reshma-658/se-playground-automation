@@ -1,19 +1,15 @@
 {
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.5.1",
     "allure-commandline": "^2.43.0",
     "allure-playwright": "^3.11.0"
   },
   "scripts": {
     "clean:allure": "cmd /c \"rmdir /s /q allure-results & rmdir /s /q allure-report\"",
-
     "test": "playwright test",
-
-    
     "posttest": "cmd /c \"copy /y allure-meta\\executor.json allure-results\\executor.json & copy /y allure-meta\\environment.properties allure-results\\environment.properties & copy /y allure-meta\\categories.json allure-results\\categories.json\"",
-
-
     "allure:generate": "allure generate allure-results",
-
     "allure:open": "allure open allure-report"
   }
 }
