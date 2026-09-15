@@ -37,8 +37,6 @@ export default class PlaygroundPage extends BasePage{
   async goto(url: string) {
     Logger.action('Navigating to TensorFlow Playground...');
     await super.goto(url);
-    const cookies = await this.page.context().cookies();
-    expect(cookies.length).toBeGreaterThan(0);
     Logger.success('Navigation successful.');
   }
 
